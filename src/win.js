@@ -1,16 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from './images/logo.png'
 import { useNavigate } from 'react-router-dom';
 import Cigarra from './images/cirgarra.png'
+import Confetti from 'react-confetti'
 
 const Win = () => {
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  	function getCurrentDimension(){
+    	return {
+      		width: window.innerWidth,
+      		height: window.innerHeight
+    	}
+  	}
+
   const navigate = useNavigate();
   const routeChange = () =>{ 
     navigate('/');
   }
 
+  useEffect(() => {
+    const updateDimension = () => {
+        setScreenSize(getCurrentDimension())
+    }
+    window.addEventListener('resize', updateDimension);
+
+
+    return(() => {
+        window.removeEventListener('resize', updateDimension);
+    })
+}, [screenSize])
+
   return(
     <>
+      <Confetti
+        width={screenSize.width}
+        height={screenSize.height}
+      />
       <div className="center-content logo-div">
         <img src={Logo} className="logo"/>
       </div>
