@@ -1,6 +1,7 @@
 {
   "short_name": "Crea J 2k3 Proyect",
-  "name": "Create React App Sample",
+  "name": "Crea J Project - The ant & the Glasshopper",
+  "description": "This is a small project that he uses to consult people about the moral of the fable the ant and the grasshopper. \n\nThis project has been developed for educational purposes to be presented at the CREA J 2023 Event at Colegio Don Bosco El Salvador.",
   "icons": [
     {
       "src": "logo-cdb.png",

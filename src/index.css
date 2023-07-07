@@ -8,6 +8,7 @@ body{
 } 
 
 .footer {
+  margin-top: 15px !important;
   position: fixed;
   left: 0;
   bottom: 0;

@@ -56,7 +56,7 @@ const Win = () => {
         </div>
       </div>
       <br></br>
-      <div class="footer">
+      <div className="footer">
         <img src={Footer}/>
       </div>
     </>
