@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './images/logo.png'
 import { useNavigate } from 'react-router-dom';
 import Hormiga from './images/hormiga.png'
+import Footer from './images/footer.png'
 
 const Lose = () => {
   const navigate = useNavigate();
@@ -27,6 +28,10 @@ const Lose = () => {
           Back
         </button>
         </div>
+      </div>
+      <br></br>
+      <div class="footer">
+        <img src={Footer}/>
       </div>
     </>
   )

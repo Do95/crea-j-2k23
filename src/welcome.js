@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './images/logo.png'
 import { useNavigate } from 'react-router-dom';
 import CigarraAndHormiga from './images/cigarra-and-hormiga-2.png';
+import Footer from './images/footer.png'
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -24,6 +25,10 @@ const Welcome = () => {
         <div>
           <button className="button" onClick={() => routeChange() }>Start</button>
         </div>
+      </div>
+      <br></br>
+      <div class="footer">
+        <img src={Footer}/>
       </div>
     </>
   )

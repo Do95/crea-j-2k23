@@ -3,6 +3,7 @@ import Logo from './images/logo.png'
 import { useNavigate } from 'react-router-dom';
 import Cigarra from './images/cirgarra.png'
 import Confetti from 'react-confetti'
+import Footer from './images/footer.png'
 
 const Win = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -53,6 +54,10 @@ const Win = () => {
           Back
         </button>
         </div>
+      </div>
+      <br></br>
+      <div class="footer">
+        <img src={Footer}/>
       </div>
     </>
   )

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Logo from './images/logo.png'
+import Footer from './images/footer.png'
 import { useNavigate } from 'react-router-dom';
 
 const Questions = () => {
@@ -13,7 +14,7 @@ const Questions = () => {
     },
     {
       id: 2,
-      text: "Whe should always beware of flattering words.",
+      text: "When should always beware of flattering words.",
       isCorrect: false,
     },
     {
@@ -32,14 +33,14 @@ const Questions = () => {
   }
 
   useEffect(()=>{
-    const newOrder = arrayAnswers.sort(() => 0.4 - Math.random());
+    const newOrder = arrayAnswers.sort(() => Math.random() - 0.5);
     setAnswers(newOrder);
   }, []);
 
   return(
     <>
       <div className="center-content logo-div">
-        <img src={Logo}className="logo"/>
+        <img src={Logo} className="logo"/>
       </div>
 
       <div className="container">
@@ -55,6 +56,10 @@ const Questions = () => {
             ))
            }
         </div>
+      </div>
+      <br></br>
+      <div class="footer">
+        <img src={Footer}/>
       </div>
     </>
   )
