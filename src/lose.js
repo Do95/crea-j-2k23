@@ -5,16 +5,21 @@ import Hormiga from './images/hormiga.png'
 import Footer from './images/footer.png'
 
 const Lose = () => {
-
+  const question = localStorage.getItem('questions');
   const navigate = useNavigate();
   const routeChange = () =>{ 
     navigate('/');
   }
 
   useEffect(()=>{
-    let audio = new Audio("https://public-images-project.s3.us-east-2.amazonaws.com/lose.mp3")
-    audio.volume = 0.2;
-    audio.play();
+    if(question !== 'true'){
+      navigate('/');
+    }else{
+      localStorage.setItem('questions', 'false');
+      let audio = new Audio("https://public-images-project.s3.us-east-2.amazonaws.com/lose.mp3")
+      audio.volume = 0.2;
+      audio.play();
+    }
   }, []);
 
   return(

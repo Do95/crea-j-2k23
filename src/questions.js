@@ -25,6 +25,7 @@ const Questions = () => {
   ]
 
   const handleResult = (result) => {
+    localStorage.setItem('questions', 'true');
    if(result){
      navigate('/win')
    }else{

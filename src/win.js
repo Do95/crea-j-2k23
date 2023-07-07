@@ -5,33 +5,41 @@ import Cigarra from './images/cirgarra.png'
 import Confetti from 'react-confetti'
 import Footer from './images/footer.png'
 
+
 const Win = () => {
-  const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-
-  	function getCurrentDimension(){
-    	return {
-      		width: window.innerWidth,
-      		height: window.innerHeight
-    	}
-  	}
-
   const navigate = useNavigate();
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  const question = localStorage.getItem('questions');
+
+
+  function getCurrentDimension(){
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
+  }
+
+
   const routeChange = () =>{ 
     navigate('/');
   }
 
   useEffect(() => {
-    let audio = new Audio("https://public-images-project.s3.us-east-2.amazonaws.com/win.mp3");
-    audio.volume =0.2;
-    audio.play();
 
+    if(question !== 'true'){
+      navigate('/');
+    }else{
+      let audio = new Audio("https://public-images-project.s3.us-east-2.amazonaws.com/win.mp3");
+      audio.volume =0.2;
+      audio.play();
+    }
+  
     const updateDimension = () => {
         setScreenSize(getCurrentDimension())
     }
     window.addEventListener('resize', updateDimension);
-
-
+ 
+    localStorage.setItem('questions', 'false');
     return(() => {
         window.removeEventListener('resize', updateDimension);
     })
