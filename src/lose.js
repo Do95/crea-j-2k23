@@ -30,7 +30,7 @@ const Lose = () => {
         </div>
       </div>
       <br></br>
-      <div classNmae="footer">
+      <div className="footer">
         <img src={Footer}/>
       </div>
     </>

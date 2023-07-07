@@ -8,7 +8,6 @@ body{
 } 
 
 .footer {
-  margin-top: 15px !important;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -17,6 +16,7 @@ body{
   color: white;
   text-align: center;
 }
+
 .footer > img {
   max-width: 250px;
   padding: 10px 0px 10px 0px;
@@ -94,6 +94,21 @@ body{
     display: table;
     text-align: center;
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black !important;
+    color: white black !important;
+    text-align: center black !important;
+  }
+  .footer > img {
+    max-width: 100px !important;
+    padding: 10px 0px 10px 0px;
+  }
+  
 
 }
 
