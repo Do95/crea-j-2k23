@@ -1,20 +1,20 @@
 {
   "short_name": "Crea J 2k3 Proyect",
   "name": "Crea J Project - The ant & the Glasshopper",
-  "description": "This is a small project that he uses to consult people about the moral of the fable the ant and the grasshopper. \n\nThis project has been developed for educational purposes to be presented at the CREA J 2023 Event at Colegio Don Bosco El Salvador.",
+  "description": "This is a small project that will serve to consult people about the moral of the fable of the ant and the grasshopper. \nThis project has been developed for educational purposes to be presented at the CREA J 2023 Event at Colegio Don Bosco El Salvador.",
   "icons": [
     {
-      "src": "logo-cdb.png",
+      "src": "https://public-images-project.s3.us-east-2.amazonaws.com/meta-image.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo-cdb.png",
+      "src": "https://public-images-project.s3.us-east-2.amazonaws.com/meta-image.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo-cdb.png",
+      "src": "https://public-images-project.s3.us-east-2.amazonaws.com/meta-image.png",
       "type": "image/png",
       "sizes": "512x512"
     }
