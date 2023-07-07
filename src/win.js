@@ -8,6 +8,7 @@ import Footer from './images/footer.png'
 const Win = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
 
+
   	function getCurrentDimension(){
     	return {
       		width: window.innerWidth,
@@ -21,6 +22,10 @@ const Win = () => {
   }
 
   useEffect(() => {
+    let audio = new Audio("https://public-images-project.s3.us-east-2.amazonaws.com/win.mp3");
+    audio.volume =0.2;
+    audio.play();
+
     const updateDimension = () => {
         setScreenSize(getCurrentDimension())
     }
